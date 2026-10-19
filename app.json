@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "FitPulse",
+    "slug": "fitpulse",
+    "version": "0.1.0",
+    "scheme": "fitpulse",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.janarthananvm.fitpulse",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "FitPulse uses your location only while an outdoor workout is recording, to measure distance and pace."
+      }
+    },
+    "android": {
+      "package": "com.janarthananvm.fitpulse",
+      "adaptiveIcon": {
+        "backgroundColor": "#122338",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"],
+      "blockedPermissions": ["ACCESS_BACKGROUND_LOCATION"],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "FitPulse uses your location only while an outdoor workout is recording, to measure distance and pace."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
